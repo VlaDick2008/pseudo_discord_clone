@@ -1,0 +1,255 @@
+@import 'vars';
+@import 'libs';
+@import 'global';
+
+.outer-wrapper {
+  display: inline-flex;
+  background: url(../public/img/bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.groups-block {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100%;
+}
+
+.groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  .group-item-active {
+    opacity: 1;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    background-color: rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 50%;
+    margin: 10px 11px 10px 5px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+  }
+
+  &:hover {
+    button {
+      opacity: 1;
+      border-radius: 35%;
+      img {
+        border-radius: 35%;
+      }
+    }
+    .dot {
+      span {
+        height: 30px;
+      }
+    }
+  }
+}
+
+.add-group {
+  position: absolute;
+  bottom: 0;
+  button {
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  .dot {
+    visibility: hidden;
+  }
+}
+
+.dot {
+  position: relative;
+  overflow: hidden;
+  width: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  contain: layout size;
+  span {
+    transition: all 0.3s;
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 0 4px 4px 0;
+    margin-left: -4px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.chanels-block {
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  color: #fff;
+  width: 300px;
+
+  overflow-y: scroll;
+  height: 100vh;
+
+  &::-webkit-scrollbar-track {
+    border: none;
+    padding: 2px 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+  }
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .titles-list {
+    padding: 10px 10px 10px 0;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.titles-list-block {
+  display: flex;
+  align-items: center;
+}
+
+.chanels,
+.friends {
+  @include listnull;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.chanels-title-block {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.chanels-item {
+  padding: 7px;
+  padding-left: 13px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chanels-item-active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.friend-block {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+
+  .name {
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    margin-right: 10px;
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+  }
+}
+
+.person-online-ico {
+  margin-right: 10px;
+}
+
+.online {
+  path {
+    fill: #70cc16;
+  }
+}
+
+.settings-ico {
+  path {
+    transition: all 0.2s;
+  }
+}
+
+.sending-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  transition: all 0.5s;
+
+  &:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.settings-ico:hover {
+  path {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.members-side-list {
+  // overflow-y: scroll;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  width: 377px;
+}

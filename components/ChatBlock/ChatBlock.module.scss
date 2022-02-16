@@ -1,0 +1,224 @@
+.chatBlock {
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.headerBlock {
+  display: flex;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle,
+.headerInfo {
+  display: flex;
+  align-items: center;
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.chatNameTitle {
+  margin-right: 10px;
+}
+
+.addInFavorites {
+  cursor: pointer;
+}
+
+.membersCount {
+  display: flex;
+  align-items: center;
+}
+
+.headerInfo {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.membersNumber {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.searchPost {
+  padding: 8px 0 8px 12px;
+  width: 300px;
+  margin-right: 25px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.notifications {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.notificationsSignal {
+  position: absolute;
+  top: 27px;
+  right: 339px;
+}
+
+.moreSettings {
+  cursor: pointer;
+}
+
+.chatBody {
+  overflow-y: scroll;
+  height: 82vh;
+
+  &::-webkit-scrollbar-track {
+    border: none;
+    padding: 2px 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.messageItem {
+  display: flex;
+  margin: 25px;
+  align-items: flex-start;
+}
+
+.messagePhoto {
+  object-fit: cover;
+  border-radius: 7px;
+  width: 40px;
+  height: 40px;
+}
+
+.messageTitle {
+  display: flex;
+}
+
+.messangerName {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.messageDate {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.messageText {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.messageLineBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.messageLine {
+  width: 96%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.messageLineText {
+  background-color: #fff;
+  text-align: center;
+  padding: 0 25px;
+  margin-top: -12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.sendingBlock {
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 18px 25px;
+  display: flex;
+  align-items: center;
+}
+
+.addFile,
+.voiceMessage,
+.emoji {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  svg {
+    path {
+      transition: all 0.2s;
+    }
+  }
+}
+
+.addFile,
+.voiceMessage {
+  margin-right: 20px;
+  transition: all 0.2s;
+}
+
+.emoji {
+  margin-left: 20px;
+}
+
+.notifications,
+.membersCount,
+.addInFavorites,
+.moreSettings {
+  svg {
+    path {
+      transition: all 0.2s;
+    }
+  }
+}
+
+.addFile:hover,
+.voiceMessage:hover,
+.emoji:hover {
+  path {
+    fill: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.moreSettings:hover,
+.notifications:hover,
+.membersCount:hover,
+.addInFavorites:hover {
+  svg {
+    path {
+      fill: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.moreSettings:hover,
+.notifications:hover,
+.membersCount:hover,
+.addInFavorites:hover {
+  svg {
+    path {
+      fill: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

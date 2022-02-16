@@ -1,0 +1,103 @@
+.groupsBlock {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100%;
+}
+
+.groupsWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.groupItem {
+  display: flex;
+  align-items: center;
+  .groupItemActive {
+    opacity: 1;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    background-color: rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 50%;
+    margin: 10px 11px 10px 5px;
+
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+  }
+
+  &:hover {
+    button {
+      opacity: 1;
+      border-radius: 35%;
+      img {
+        border-radius: 35%;
+      }
+    }
+    .dot {
+      span {
+        height: 30px;
+      }
+    }
+  }
+}
+
+.addGroup {
+  position: absolute;
+  bottom: 0;
+  button {
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  .dot {
+    visibility: hidden;
+  }
+}
+
+.dot {
+  position: relative;
+  overflow: hidden;
+  width: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  contain: layout size;
+  span {
+    transition: all 0.3s;
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 0 4px 4px 0;
+    margin-left: -4px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.groupLogo::after {
+  position: absolute;
+  content: '';
+  left: 18px;
+  top: 69px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40px;
+  height: 3px;
+  border-radius: 10px;
+}
